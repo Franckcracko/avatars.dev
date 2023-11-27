@@ -1,7 +1,10 @@
-import { Home } from '../components/icons/Home/Home'
+import { Base } from '../components/Base'
+import { Home } from '../components/Home/Home'
 
 export default function HomePage () {
   return (
-    <Home/>
+    <Base>
+      <Home />
+    </Base>
   )
 }
