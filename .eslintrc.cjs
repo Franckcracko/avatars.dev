@@ -1,19 +1,26 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    node: true
   },
   extends: [
     'standard',
     'plugin:react/recommended'
   ],
+  ignorePatterns: ['dist', 'node_modules', '*.config.js'],
+  settings: {
+    react: { version: 'detect' }
+  },
   overrides: [
     {
       env: {
         node: true
       },
       files: [
-        '.eslintrc.{js,cjs}'
+        '.eslintrc.{js,cjs}',
+        'vite.config.js',
+        'postcss.config.js'
       ],
       parserOptions: {
         sourceType: 'script'
@@ -22,7 +29,8 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: { jsx: true }
   },
   plugins: [
     'react'
