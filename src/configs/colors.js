@@ -1,5 +1,161 @@
-export const CLOTHING_COLORS_DEFAULT = ['#3c4f5c', '#65c9ff', '#262e33', '#5199e4', '#25557c', '#929598', '#a7ffc4', '#b1e2ff', '#e6e6e6', '#ff5c5c', '#ff488e', '#ffafb9', '#ffffb1', '#ffffff']
+// Expanded skin tones with a wider range of hues and values.
+export const SKIN_COLORS = [
+  // Deep tones
+  '#3d2314',
+  '#4a2c1a',
+  '#5c3520',
+  '#6b3f25',
+  '#7a4a2c',
+  // Medium tones
+  '#8b5a36',
+  '#a06b40',
+  '#b07c52',
+  '#c08e64',
+  '#d09e75',
+  // Olive / warm
+  '#ae5d29',
+  '#c47535',
+  '#d88b45',
+  '#e6a258',
+  // Light / peachy
+  '#edb98a',
+  '#f3c79e',
+  '#f8d5b3',
+  '#fde0c4',
+  // Pale
+  '#fdebd2',
+  '#fdf2e0',
+  '#fffaee'
+]
 
-export const HAIR_COLORS = ['#2c1b18', '#4a312c', '#724133', '#a55728', '#b58143', '#c93305', '#d6b370', '#e8e1e1', '#ecdcbf', '#f59797']
+// Hair colors covering common natural + vibrant options.
+export const HAIR_COLORS = [
+  // Black & brown
+  '#0a0a0a',
+  '#1a1a1a',
+  '#2c1b18',
+  '#3a241e',
+  '#4a312c',
+  '#5e3a2b',
+  '#6b3f25',
+  '#724133',
+  '#8b4f2a',
+  // Auburn / red
+  '#a04020',
+  '#a55728',
+  '#b5651d',
+  '#c46432',
+  '#d2691e',
+  '#dc4a1a',
+  '#e64a19',
+  '#ff4500',
+  // Blonde
+  '#d4a857',
+  '#dab06b',
+  '#e0bd7d',
+  '#e8c887',
+  '#f0d090',
+  '#f5d99a',
+  '#fce5b3',
+  '#fff3c4',
+  // Gray / white
+  '#a0a0a0',
+  '#b8b8b8',
+  '#cccccc',
+  '#d8d8d8',
+  '#e8e1e1',
+  '#f0f0f0',
+  '#ffffff',
+  // Fashion colors
+  '#c93305',
+  '#d6b370',
+  '#ecdcbf',
+  '#f59797',
+  '#ff77aa',
+  '#9c27b0',
+  '#3f51b5',
+  '#009688',
+  '#4caf50'
+]
 
-export const SKIN_COLORS = ['#614335', '#ae5d29', '#d08b5b', '#edb98a', '#f8d25c', '#fd9841', '#ffdbb4']
+// Clothing colors: neutrals, brights, and a curated set of pastels.
+export const CLOTHING_COLORS_DEFAULT = [
+  // Neutrals
+  '#000000',
+  '#1a1a1a',
+  '#262e33',
+  '#3c4f5c',
+  '#525252',
+  '#6b7280',
+  '#929598',
+  '#b8b8b8',
+  '#cccccc',
+  '#e6e6e6',
+  '#f0f0f0',
+  '#ffffff',
+  // Warm / earth
+  '#8d6e63',
+  '#a1887f',
+  '#d7ccc8',
+  '#bcaaa4',
+  '#ffcc80',
+  '#ffb74d',
+  '#ffa726',
+  '#ff9800',
+  // Cool
+  '#0d47a1',
+  '#1976d2',
+  '#2196f3',
+  '#03a9f4',
+  '#00bcd4',
+  '#26c6da',
+  '#4dd0e1',
+  '#80deea',
+  '#b2ebf2',
+  '#e0f7fa',
+  '#65c9ff',
+  '#5199e4',
+  '#25557c',
+  '#b1e2ff',
+  // Greens
+  '#1b5e20',
+  '#388e3c',
+  '#4caf50',
+  '#66bb6a',
+  '#81c784',
+  '#a5d6a7',
+  '#a7ffc4',
+  '#c8e6c9',
+  // Pinks / purples
+  '#4a148c',
+  '#7b1fa2',
+  '#9c27b0',
+  '#ba68c8',
+  '#ce93d8',
+  '#e1bee7',
+  '#ec407a',
+  '#ff5c5c',
+  '#ff488e',
+  '#ff80ab',
+  '#ffafb9',
+  '#f8bbd0',
+  // Yellows / oranges
+  '#f57c00',
+  '#ff6f00',
+  '#ffa000',
+  '#ffc107',
+  '#ffeb3b',
+  '#fff59d',
+  '#ffffb1',
+  '#fff8e1',
+  // Reds
+  '#b71c1c',
+  '#c62828',
+  '#d32f2f',
+  '#e53935',
+  '#f44336',
+  '#ef5350',
+  '#e57373',
+  '#ff5252',
+  '#ff8a80'
+]

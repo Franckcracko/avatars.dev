@@ -1,25 +1,58 @@
 import { create } from 'zustand'
 
-const initialStateFavorites = JSON.parse(localStorage.getItem('avatarsFavorites')) || []
+const STORAGE_KEY = 'avatarsFavorites'
 
-export const useFavoriteAvatarsStorage = create((set) => ({
-  favorites: initialStateFavorites,
+const readFavorites = () => {
+  if (typeof window === 'undefined') return []
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+  } catch {
+    return []
+  }
+}
+
+const writeFavorites = (favorites) => {
+  if (typeof window === 'undefined') return
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(favorites))
+}
+
+const initialFavorites = readFavorites()
+
+export const useFavoriteAvatarsStorage = create((set, get) => ({
+  favorites: initialFavorites,
+
   findFavoriteAvatar: (id) => {
-    const favorites = JSON.parse(localStorage.getItem('avatarsFavorites')) || []
-    return favorites.find(favorite => favorite.id === id)
+    return get().favorites.find((favorite) => favorite.id === id)
   },
-  addFavoriteAvatar: (avatar) => set((state) => {
-    const newFavorites = [...state.favorites, avatar]
-    localStorage.setItem('avatarsFavorites', JSON.stringify(newFavorites))
-    return { favorites: newFavorites }
-  }),
-  removeFavoriteAvatar: (id) => set((state) => {
-    const newFavorites = state.favorites.filter(favorite => favorite.id !== id)
-    localStorage.setItem('avatarsFavorites', JSON.stringify(newFavorites))
-    return { favorites: newFavorites }
-  }),
-  clearFavorites: () => set(() => {
-    localStorage.removeItem('avatarsFavorites')
-    return { favorites: [] }
-  })
+
+  isFavorite: (id) => !!get().favorites.find((f) => f.id === id),
+
+  addFavoriteAvatar: (avatar) =>
+    set((state) => {
+      if (state.favorites.some((f) => f.id === avatar.id)) return state
+      const newFavorites = [avatar, ...state.favorites]
+      writeFavorites(newFavorites)
+      return { favorites: newFavorites }
+    }),
+
+  removeFavoriteAvatar: (id) =>
+    set((state) => {
+      const newFavorites = state.favorites.filter((favorite) => favorite.id !== id)
+      writeFavorites(newFavorites)
+      return { favorites: newFavorites }
+    }),
+
+  toggleFavorite: (avatar) => {
+    if (get().isFavorite(avatar.id)) {
+      get().removeFavoriteAvatar(avatar.id)
+    } else {
+      get().addFavoriteAvatar(avatar)
+    }
+  },
+
+  clearFavorites: () =>
+    set(() => {
+      writeFavorites([])
+      return { favorites: [] }
+    })
 }))
