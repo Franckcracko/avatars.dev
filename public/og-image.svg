@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="glow-primary" cx="0.15" cy="0.2" r="0.5">
+      <stop offset="0%" stop-color="#0d9488" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-accent" cx="0.85" cy="0.8" r="0.5">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brand-text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="logo-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow-primary)"/>
+  <rect width="1200" height="630" fill="url(#glow-accent)"/>
+
+  <!-- Logo mark -->
+  <g transform="translate(80, 220)">
+    <rect width="120" height="120" rx="28" fill="url(#logo-bg)"/>
+    <g transform="translate(60, 60)">
+      <!-- Sparkle mark -->
+      <path d="M 0 -32 L 8 -8 L 32 0 L 8 8 L 0 32 L -8 8 L -32 0 L -8 -8 Z" fill="white" opacity="0.95"/>
+      <circle cx="0" cy="0" r="5" fill="white"/>
+    </g>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(230, 250)">
+    <text x="0" y="50" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="76" font-weight="800" fill="white" letter-spacing="-2">Avatars</text>
+    <text x="365" y="50" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="76" font-weight="800" fill="url(#brand-text)" letter-spacing="-2">.dev</text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="230" y="370" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="500" fill="#cbd5e1">Genera, personaliza y descarga</text>
+  <text x="230" y="410" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="500" fill="#cbd5e1">avatares únicos en segundos.</text>
+
+  <!-- Decorative avatar sample cards (right side) -->
+  <g transform="translate(820, 130)">
+    <!-- Card 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="140" height="180" rx="24" fill="url(#card)" stroke="#334155" stroke-width="1"/>
+      <circle cx="70" cy="70" r="40" fill="#fde68a"/>
+      <circle cx="70" cy="60" r="22" fill="#92400e"/>
+      <circle cx="62" cy="58" r="2.5" fill="#0f172a"/>
+      <circle cx="78" cy="58" r="2.5" fill="#0f172a"/>
+      <path d="M 60 75 Q 70 80 80 75" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <rect x="40" y="120" width="60" height="6" rx="3" fill="#64748b"/>
+      <rect x="46" y="132" width="48" height="6" rx="3" fill="#475569"/>
+      <rect x="50" y="148" width="40" height="14" rx="7" fill="#0d9488"/>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(160, 30)">
+      <rect width="140" height="180" rx="24" fill="url(#card)" stroke="#334155" stroke-width="1"/>
+      <circle cx="70" cy="70" r="40" fill="#fef3c7"/>
+      <circle cx="70" cy="60" r="22" fill="#451a03"/>
+      <circle cx="62" cy="58" r="2.5" fill="#0f172a"/>
+      <circle cx="78" cy="58" r="2.5" fill="#0f172a"/>
+      <path d="M 58 75 Q 70 82 82 75" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="42" cy="68" r="4" fill="#ec4899" opacity="0.7"/>
+      <circle cx="98" cy="68" r="4" fill="#ec4899" opacity="0.7"/>
+      <rect x="40" y="120" width="60" height="6" rx="3" fill="#64748b"/>
+      <rect x="46" y="132" width="48" height="6" rx="3" fill="#475569"/>
+      <rect x="50" y="148" width="40" height="14" rx="7" fill="#f97316"/>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(40, 100)">
+      <rect width="140" height="180" rx="24" fill="url(#card)" stroke="#334155" stroke-width="1"/>
+      <circle cx="70" cy="70" r="40" fill="#a7f3d0"/>
+      <circle cx="70" cy="60" r="22" fill="#1f2937"/>
+      <circle cx="62" cy="58" r="2.5" fill="#0f172a"/>
+      <circle cx="78" cy="58" r="2.5" fill="#0f172a"/>
+      <path d="M 60 74 Q 70 70 80 74" stroke="#0f172a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <rect x="40" y="120" width="60" height="6" rx="3" fill="#64748b"/>
+      <rect x="46" y="132" width="48" height="6" rx="3" fill="#475569"/>
+      <rect x="50" y="148" width="40" height="14" rx="7" fill="#8b5cf6"/>
+    </g>
+  </g>
+
+  <!-- Bottom bar -->
+  <g transform="translate(80, 560)">
+    <rect width="120" height="4" rx="2" fill="#0d9488"/>
+    <rect x="132" width="120" height="4" rx="2" fill="#f97316"/>
+  </g>
+  <text x="280" y="568" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="500" fill="#94a3b8" letter-spacing="0.5">SVG · PNG · JPG · Gratis · Sin registro</text>
+
+  <!-- URL badge -->
+  <g transform="translate(950, 560)">
+    <rect width="170" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="85" y="22" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">avatars.dev</text>
+  </g>
+</svg>

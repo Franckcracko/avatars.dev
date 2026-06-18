@@ -1,0 +1,72 @@
+{
+  "name": "Avatars.Dev — Generador de avatares con ruleta",
+  "short_name": "Avatars.Dev",
+  "description": "Genera, personaliza y descarga avatares únicos en segundos. Ruleta mágica, edición completa, favoritos y exportación SVG/PNG/JPG.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f172a",
+  "theme_color": "#0d9488",
+  "categories": ["entertainment", "design", "productivity", "utilities"],
+  "lang": "es",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "2400x1260",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Avatars.Dev — Generador de avatares con ruleta mágica"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Generar avatar",
+      "short_name": "Generar",
+      "description": "Abre la ruleta para generar un nuevo avatar",
+      "url": "/?action=generate",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Galería",
+      "short_name": "Galería",
+      "description": "Explora la galería de avatares",
+      "url": "/avatars",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Editar",
+      "short_name": "Editar",
+      "description": "Edita el avatar actual",
+      "url": "/editar",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}

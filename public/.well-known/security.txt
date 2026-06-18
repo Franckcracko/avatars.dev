@@ -1,0 +1,4 @@
+Contact: mailto:franckcracko@avatars.dev
+Expires: 2027-12-31T23:59:59z
+Preferred-Languages: es, en
+Canonical: https://avatars.dev/.well-known/security.txt

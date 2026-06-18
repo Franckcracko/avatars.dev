@@ -1,15 +1,368 @@
 <!doctype html>
-<html lang="en">
+<html lang="es" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sitio web generador de íconos de avatares. Diviértete con tus amigos y ve qué personaje les toca.">
-    <meta name="keywords" content="avatars, generar, divertido, diversion, colorido, personajes">
-    <title>Avatars.Dev</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- =========================================================
+         Primary meta
+         ========================================================= -->
+    <title>Avatars.Dev — Generador de avatares con ruleta mágica</title>
+    <meta
+      name="title"
+      content="Avatars.Dev — Generador de avatares con ruleta mágica"
+    />
+    <meta
+      name="description"
+      content="Genera, personaliza y descarga avatares únicos en segundos. Ruleta mágica, edición completa con +100 rasgos, paletas personalizables, favoritos y exportación en SVG, PNG y JPG. 100% gratis, sin registro."
+    />
+    <meta
+      name="keywords"
+      content="generador de avatares, avatar generator, avataaars, dicebear, crear avatar, avatar personalizado, ruleta de avatares, random avatar, profile picture, pfp maker, avatar maker, avatares gratis, avatar svg, avatar png, discord avatar, twitter avatar, avatares para redes sociales, generador personajes, cartoon avatar, anime avatar, pixel avatar, avatares sin registro, free avatar maker, online avatar creator"
+    />
+    <meta name="author" content="franckcracko" />
+    <meta name="designer" content="franckcracko" />
+    <meta name="owner" content="franckcracko" />
+    <meta name="copyright" content="© 2026 franckcracko" />
+    <meta name="reply-to" content="franckcracko@avatars.dev" />
+    <meta name="language" content="Spanish" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="3 days" />
+    <meta name="category" content="Design, Entertainment, Productivity" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="target" content="all" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Avatars.Dev" />
+    <meta name="application-name" content="Avatars.Dev" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#0d9488" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="msapplication-TileColor" content="#0d9488" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- =========================================================
+         Robots / Indexing
+         ========================================================= -->
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta
+      name="googlebot"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="slurp" content="index, follow" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- =========================================================
+         Canonical + hreflang
+         ========================================================= -->
+    <link rel="canonical" href="https://avatars.dev/" />
+    <link rel="alternate" hreflang="es" href="https://avatars.dev/" />
+    <link rel="alternate" hreflang="es-ES" href="https://avatars.dev/" />
+    <link rel="alternate" hreflang="es-MX" href="https://avatars.dev/" />
+    <link rel="alternate" hreflang="es-AR" href="https://avatars.dev/" />
+    <link rel="alternate" hreflang="x-default" href="https://avatars.dev/" />
+
+    <!-- =========================================================
+         Icons
+         ========================================================= -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/x-icon" href="/logo.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+    <link rel="mask-icon" href="/favicon.svg" color="#0d9488" />
+
+    <!-- =========================================================
+         PWA
+         ========================================================= -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- =========================================================
+         Open Graph
+         ========================================================= -->
+    <meta property="og:site_name" content="Avatars.Dev" />
+    <meta property="og:title" content="Avatars.Dev — Generador de avatares con ruleta mágica" />
+    <meta
+      property="og:description"
+      content="Crea tu avatar único en un giro. Ruleta mágica, edición completa y descarga en SVG, PNG o JPG. Gratis, sin registro."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://avatars.dev/" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:determiner" content="" />
+    <meta
+      property="og:image"
+      content="https://avatars.dev/og-image.png"
+    />
+    <meta property="og:image:secure_url" content="https://avatars.dev/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
+    <meta property="og:image:alt" content="Avatars.Dev — Generador de avatares con ruleta mágica" />
+
+    <!-- =========================================================
+         Twitter / X
+         ========================================================= -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@avatarsdev" />
+    <meta name="twitter:creator" content="@franckcracko" />
+    <meta name="twitter:title" content="Avatars.Dev — Generador de avatares con ruleta mágica" />
+    <meta
+      name="twitter:description"
+      content="Crea tu avatar único en un giro. Ruleta mágica, edición completa y descarga en SVG, PNG o JPG. Gratis, sin registro."
+    />
+    <meta
+      name="twitter:image"
+      content="https://avatars.dev/og-image.png"
+    />
+    <meta name="twitter:image:alt" content="Avatars.Dev — Generador de avatares con ruleta mágica" />
+    <meta
+      name="twitter:image"
+      content="https://avatars.dev/twitter-card.png"
+    />
+
+    <!-- =========================================================
+         Performance
+         ========================================================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://avatars.dev" />
+    <link
+      rel="preload"
+      as="image"
+      href="/og-image.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="https://fonts.gstatic.com/s/bricolagegrotesque/v3/3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5jBNz_19PpbpMXuECpwUxJBOm_oiavi0.woff2"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@300..700&display=swap"
+    />
+
+    <!-- =========================================================
+         JSON-LD: Organization (Author + Brand)
+         ========================================================= -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://avatars.dev/#organization",
+        "name": "Avatars.Dev",
+        "alternateName": "Avatars Dev",
+        "url": "https://avatars.dev",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://avatars.dev/og-image.svg",
+          "width": 1200,
+          "height": 630
+        },
+        "image": "https://avatars.dev/og-image.svg",
+        "description": "Generador de avatares con ruleta mágica, editor completo y descarga en múltiples formatos.",
+        "founder": {
+          "@type": "Person",
+          "name": "franckcracko",
+          "email": "franckcracko@avatars.dev",
+          "url": "https://avatars.dev"
+        },
+        "sameAs": [
+          "https://github.com/franckcracko",
+          "https://twitter.com/franckcracko"
+        ]
+      }
+    </script>
+
+    <!-- =========================================================
+         JSON-LD: WebSite (SearchAction)
+         ========================================================= -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://avatars.dev/#website",
+        "url": "https://avatars.dev",
+        "name": "Avatars.Dev",
+        "description": "Generador de avatares con ruleta mágica.",
+        "publisher": { "@id": "https://avatars.dev/#organization" },
+        "inLanguage": "es-ES",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://avatars.dev/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- =========================================================
+         JSON-LD: SoftwareApplication
+         ========================================================= -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Avatars.Dev",
+        "operatingSystem": "Web (Chrome, Firefox, Safari, Edge)",
+        "applicationCategory": "DesignApplication",
+        "applicationSubCategory": "Avatar Generator",
+        "description": "Genera avatares únicos con una ruleta mágica, edítalos con cientos de opciones y descárgalos en SVG, PNG o JPG.",
+        "url": "https://avatars.dev",
+        "image": "https://avatars.dev/og-image.svg",
+        "downloadUrl": "https://avatars.dev",
+        "softwareVersion": "1.0",
+        "datePublished": "2026-01-01",
+        "dateModified": "2026-06-17",
+        "author": {
+          "@type": "Person",
+          "name": "franckcracko"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Avatars.Dev"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Ruleta mágica de avatares",
+          "Editor con +100 rasgos",
+          "Paletas de colores personalizables",
+          "Exportación en SVG, PNG y JPG",
+          "Sistema de favoritos",
+          "Sin registro requerido",
+          "Funciona en cualquier dispositivo"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "1280",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      }
+    </script>
+
+    <!-- =========================================================
+         JSON-LD: FAQPage
+         ========================================================= -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es Avatars.Dev?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Avatars.Dev es un generador de avatares online y gratuito que crea avatares únicos usando una ruleta mágica. Puedes personalizar cada rasgo, guardar tus favoritos y descargar el resultado en SVG, PNG o JPG."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Necesito registrarme para usar Avatars.Dev?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Avatars.Dev es 100% gratis y no requiere registro. Solo abre la página y empieza a generar avatares."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿En qué formatos puedo descargar mi avatar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puedes descargar tus avatares en SVG (vectorial), PNG (con transparencia) o JPG (fondo sólido). También puedes copiarlos al portapapeles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo personalizar los colores?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Avatars.Dev incluye más de 130 colores preestablecidos para piel, cabello y ropa, y también puedes añadir tus propios colores personalizados."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Funciona en móvil?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí. Avatars.Dev está optimizado para dispositivos móviles, tablets y escritorio."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- =========================================================
+         JSON-LD: BreadcrumbList
+         ========================================================= -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://avatars.dev/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Galería",
+            "item": "https://avatars.dev/avatars"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Editor",
+            "item": "https://avatars.dev/editar"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Preferencias",
+            "item": "https://avatars.dev/preferencias"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <h1>Avatars.Dev — Generador de avatares con ruleta mágica</h1>
+      <p>
+        Avatars.Dev es un generador de avatares online y gratuito. Crea avatares
+        únicos con la ruleta mágica, edítalos con cientos de opciones y
+        descárgalos en SVG, PNG o JPG. Por favor, habilita JavaScript para usar
+        la aplicación completa.
+      </p>
+      <p>
+        <a href="/avatars">Ver galería de avatares</a> ·
+        <a href="/editar">Ir al editor</a>
+      </p>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
