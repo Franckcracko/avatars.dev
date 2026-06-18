@@ -1,41 +1,64 @@
-import { useEffect, useState } from 'react'
-import { MEDIA_SIZE_ICONS } from '../configs/constants'
-import { HeartIconFilled } from './icons/HeartFilledIcon'
-import { HeartIcon } from './icons/HeartIcon'
-import { useFavoriteAvatarsStorage } from '../stores/useFavoriteAvatarsStorage'
-import { useAvatarStore } from '../stores/useAvatarStore'
+import { useState, useEffect } from 'react'
+import { Heart } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { useFavoriteAvatarsStorage } from '@/stores/useFavoriteAvatarsStorage'
+import { useAvatarStore } from '@/stores/useAvatarStore'
+import { cn } from '@/lib/utils'
+import { toast } from 'sonner'
 
-export const ButtonFavorite = ({ id, avatarUri, nameAvatar }) => {
-  const addFavoriteAvatar = useFavoriteAvatarsStorage((state) => state.addFavoriteAvatar)
-  const removeFavoriteAvatar = useFavoriteAvatarsStorage((state) => state.removeFavoriteAvatar)
-  const findFavoriteAvatar = useFavoriteAvatarsStorage((state) => state.findFavoriteAvatar)
+export const ButtonFavorite = ({ id, avatarUri, nameAvatar, variant = 'default' }) => {
+  const toggleFavorite = useFavoriteAvatarsStorage((s) => s.toggleFavorite)
+  const isFavorite = useFavoriteAvatarsStorage((s) => s.isFavorite)
+
   const idAvatar = id ?? useAvatarStore((state) => state.seed)
   const name = nameAvatar ?? useAvatarStore((state) => state.name)
-  const avatar = avatarUri ?? useAvatarStore((state) => state.avatar)
-  const [favorite, setFavorite] = useState(findFavoriteAvatar(idAvatar) !== undefined)
+  const avatar =
+    avatarUri ??
+    useAvatarStore((state) =>
+      typeof state.avatar === 'string' ? state.avatar : state.avatar.toDataUriSync()
+    )
+  const configs = useAvatarStore((state) => state.configs)
+
+  const [favorite, setFavorite] = useState(isFavorite(idAvatar))
+
   useEffect(() => {
-    setFavorite(findFavoriteAvatar(idAvatar) !== undefined)
-  }, [avatar])
+    setFavorite(isFavorite(idAvatar))
+  }, [idAvatar, isFavorite, avatar])
+
+  const handleClick = (e) => {
+    e?.stopPropagation?.()
+    const data = { id: idAvatar, avatar, name, configs }
+    toggleFavorite(data)
+    const next = !favorite
+    setFavorite(next)
+    toast.success(
+      next ? `${name} guardado en favoritos` : `${name} eliminado de favoritos`,
+      { description: next ? 'Lo encontrarás en Preferencias' : undefined }
+    )
+  }
 
   return (
-    <button
+    <Button
       type="button"
-      className="text-primary_color_dark text-opacity-80 hover:text-opacity-100 transition-opacity p-2 flex flex-col items-center"
-      onClick={() => {
-        if (!favorite) {
-          setFavorite(true)
-          addFavoriteAvatar({ id: idAvatar, avatar: typeof avatar === 'string' ? avatar : avatar.toDataUriSync(), name })
-          return
-        }
-        setFavorite(false)
-        removeFavoriteAvatar(idAvatar)
-      }}
+      variant={variant}
+      onClick={handleClick}
+      aria-pressed={favorite}
+      aria-label={favorite ? 'Quitar de favoritos' : 'Guardar en favoritos'}
+      className={cn(
+        'group/fav gap-1.5',
+        favorite && 'text-destructive hover:text-destructive'
+      )}
     >
-      {favorite
-        ? <HeartIconFilled className={MEDIA_SIZE_ICONS} />
-        : <HeartIcon className={MEDIA_SIZE_ICONS} />
-      }
-      <span className="text-dark_secondary/80 text-[8px] font-medium md:text-base">Guardar</span>
-    </button>
+      <Heart
+        aria-hidden
+        className={cn(
+          'transition-transform',
+          favorite ? 'fill-current scale-110' : 'group-hover/fav:scale-110'
+        )}
+      />
+      <span className="text-xs font-medium sm:text-sm">
+        {favorite ? 'Guardado' : 'Guardar'}
+      </span>
+    </Button>
   )
 }

@@ -3,15 +3,17 @@ import HomePage from './pages/HomePage'
 import EditPage from './pages/EditPage'
 import PreferencesPage from './pages/PreferencesPage'
 import AvatarsPage from './pages/AvatarsPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App () {
   return (
     <BrowserRouter basename="/">
-      <Routes >
-        <Route path="/" element={<HomePage/>} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route path="/avatars" element={<AvatarsPage />} />
         <Route path="/preferencias" element={<PreferencesPage />} />
         <Route path="/editar" element={<EditPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   )
