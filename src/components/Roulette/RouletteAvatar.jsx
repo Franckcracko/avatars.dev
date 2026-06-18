@@ -17,7 +17,7 @@ const buildStripAsync = (finalUri) => {
       const seed = crypto.randomUUID()
       const avatar = getAvatar({
         seed,
-        configs: { ...CONFIG_AVATAAARS.avataaars.configs_initial, size: 128 }
+        configs: { ...CONFIG_AVATAAARS.avataaars.configs_initial, size: 512 }
       })
       cells.push(avatar.toDataUriSync())
     }
@@ -40,7 +40,7 @@ export function RouletteAvatar ({
     if (!finalSeed) return ''
     return getAvatar({
       seed: finalSeed,
-      configs: { ...configs, size: 256 }
+      configs: { ...configs, size: 512 }
     }).toDataUriSync()
   }, [finalSeed, configs])
 

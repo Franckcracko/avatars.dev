@@ -37,7 +37,7 @@ const generateAvatars = () => {
       name,
       avatar: getAvatar({
         seed,
-        configs: { ...CONFIG_AVATAAARS.avataaars.configs_initial, size: 256 }
+        configs: { ...CONFIG_AVATAAARS.avataaars.configs_initial, size: 512 }
       }).toDataUriSync()
     }
   })

@@ -49,7 +49,11 @@ export const CONFIG_AVATAAARS = {
   avataaars: {
     type: typeAvataaars,
     configs_initial: {
-      size: 128,
+      // High base size so the SVG is always downscaled to fit the
+      // container (downscaling a vector is always crisp). On a 3x DPR
+      // mobile device, this avoids the pixelation that occurred when
+      // DiceBear avataaars' 128x128 design was upscaled to 192/288px.
+      size: 512,
       randomizeIds: true,
       accessories: ['eyepatch', 'kurt', 'prescription01', 'prescription02', 'round', 'sunglasses', 'wayfarers'],
       accessoriesProbability: 100,
