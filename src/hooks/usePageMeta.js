@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 
 const SITE_NAME = 'Avatars.Dev'
-const SITE_URL = 'https://avatars.dev'
-const DEFAULT_IMAGE = 'https://avatars.dev/og-image.svg'
+const SITE_URL = 'https://avatars-dev.vercel.app'
+const DEFAULT_IMAGE = 'https://avatars-dev.vercel.app/og-image.svg'
 const DEFAULT_DESCRIPTION =
   'Genera, personaliza y descarga avatares únicos en segundos. Ruleta mágica, edición completa y exportación en SVG, PNG o JPG. 100% gratis, sin registro.'
 
